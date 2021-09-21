@@ -24,7 +24,7 @@ AuthService.on(AuthService.AUTH_EVENTS.AUTHENTICATED, async function() {
   api.interceptors.request.use(refreshAuthToken)
   AppState.user = AuthService.user
   await accountService.getAccount()
-  // NOTE in order to get those socket errors to go away, comment out line 29 in this file
+  // NOTE in order to get those socket errors to go away, comment out line 28 in this file
   // socketService.authenticate(AuthService.bearer)
   // NOTE if there is something you want to do once the user is authenticated, place that here
 })
