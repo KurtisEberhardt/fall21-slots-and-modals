@@ -18,7 +18,10 @@
       </div>
     </div>
   </div>
-  <BaseModal id-prop="modalId-cars">
+
+  <!--NOTE You don't need to pass in a prop here because the top level of your base modal in this case would recieve the id attribute automatically. Only works if modal element is the very first line in your component template!!-->
+  <!--NOTE the create in the base modal requires the props to be passed down-->
+  <BaseModal id="modalId-cars">
     <template #title>
       <h5>Make a Car</h5>
     </template>
@@ -29,7 +32,7 @@
       <input type="text" v-model="newObject.price">
     </template>
   </BaseModal>
-  <BaseModal id-prop="modalId-houses">
+  <BaseModal id="modalId-houses">
     <template #title>
       <h5>Make a House</h5>
     </template>
@@ -40,7 +43,7 @@
       <input type="text" placeholder="Price" v-model="newObject.price">
     </template>
   </BaseModal>
-  <BaseModal id-prop="modalId-jobs">
+  <BaseModal id="modalId-jobs">
     <template #title>
       <h5>Make a Job</h5>
     </template>
